@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Hero - Interactive Children's Stories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #FFE168;
+        }
+        .neu-brutal {
+            border: 4px solid #000;
+            box-shadow: 6px 6px 0px #000;
+            transition: all 0.2s ease;
+        }
+        .neu-brutal:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 8px 8px 0px #000;
+        }
+        .quote {
+            border-left: 4px solid #000;
+            padding-left: 1rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <main class="space-y-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-4 md:w-1/2">
+                    <h1 class="text-5xl md:text-6xl font-bold text-purple-600 leading-tight">
+                        Turn Your Child into the Hero of Their Own Story!
+                    </h1>
+                    <p class="text-2xl text-green-600 font-semibold">
+                        Personalized. Interactive. Confidence-Boosting.
+                    </p>
+                    <a href="/create-story" class="inline-block neu-brutal bg-purple-600 text-pink-300 px-8 py-4 text-xl font-bold rounded-lg">
+                        CREATE YOUR STORY
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://illustrations.popsy.co/violet/reading-time.svg" alt="Parent reading with child" class="w-full max-w-md neu-brutal bg-white rounded-full p-4">
+                </div>
+            </div>
+
+            <section class="space-y-6">
+                <h2 class="text-3xl font-bold text-teal-600">WHY IT WORKS?</h2>
+                
+                <div class="space-y-6">
+                    <div class="neu-brutal bg-white p-6 rounded-lg">
+                        <p class="font-bold mb-2">✓ Storytelling to children helps them develop better emotional intelligence and self-concept.</p>
+                        <p class="quote">When children see themselves as heroes in stories, they begin to view challenges as conquerable." — Dr. Carol Dweck</p>
+                    </div>
+
+                    <div class="neu-brutal bg-white p-6 rounded-lg">
+                        <p class="font-bold mb-2">✓ Daily storytelling leads to improved language and vocabulary test.</p>
+                        <p class="quote">Storytelling increases imagination and language skills far more than passive watching." — Dr. Perri Klass</p>
+                    </div>
+
+                    <div class="neu-brutal bg-white p-6 rounded-lg">
+                        <p class="font-bold mb-2">✓ It develops a deeper emotional connection between parents and their children.</p>
+                        <p class="quote">Reading to a child isn't just educational — it's emotional architecture." — Harvard's Dr. Jack Shonkoff</p>
+                    </div>
+
+                    <div class="neu-brutal bg-white p-6 rounded-lg">
+                        <ul class="list-disc pl-6 space-y-4">
+                            <li>The American Academy of Pediatrics (AAP) issues a recommendation for reading aloud to children starting from birth</li>
+                            <li>Shared storytelling creates neural pathways within children's brains.</li>
+                            <li>Reading or listening to stories that contain emotional elements and moral dilemmas helps children develop better skills for managing actual stress</li>
+                            <li>The psychological framework from APA establishes that storytelling functions as a therapeutic technique that decreases children's anxiety levels while building their inner strength.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Add click animation to neu-brutal elements
+        document.querySelectorAll('.neu-brutal').forEach(element => {
+            element.addEventListener('mousedown', () => {
+                element.style.transform = 'translate(2px, 2px)';
+                element.style.boxShadow = '2px 2px 0px #000';
+            });
+            element.addEventListener('mouseup', () => {
+                element.style.transform = '';
+                element.style.boxShadow = '6px 6px 0px #000';
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
